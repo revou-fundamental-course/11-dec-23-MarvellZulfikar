@@ -1,6 +1,6 @@
 
   const form = document.getElementById("input");
-  const name = document.getElementById("name");
+  const namee = document.getElementById("name");
   const date = document.getElementById("date");
   const message = document.getElementById("news");
   const submit = document.getElementById("submit");
@@ -14,12 +14,16 @@
 
 
   form.addEventListener("submit", (e)=> {
-    if (name.value == "" || date.value == "" || news.value == "") {
+    if (namee.value == "" || date.value == "" || news.value == "") {
       alert("tidak boleh kosong");
     } else {
-      response.innerHTML = name.value;
-      response.innerHTML += date.value;
-      response.innerHTML += news.value;
+      const rusername = document.getElementById("response-name");
+      const rdate = document.getElementById("response-date");
+      const rmessage = document.getElementById("response-message");
+
+      rusername.innerHTML = namee.value;
+      rdate.innerHTML = date.value;
+      rmessage.innerHTML = news.value;
     }
 
     e.preventDefault();
